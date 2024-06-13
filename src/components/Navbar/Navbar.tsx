@@ -32,7 +32,6 @@ const Navbar = () => {
                 </div>
 
             </div>
-            navbar
         </nav>
     )
 }
