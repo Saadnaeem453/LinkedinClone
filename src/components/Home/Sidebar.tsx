@@ -5,7 +5,7 @@ const Sidebar = ({ user }: { user: any }) => {
     console.log("user", user);
     return (
         <>
-            <div className='hidden md:block w-[20%] h-fit border border-gray-300 bg-white dark:bg-black rounded'>
+            <div className='hidden md:block w-[20%] h-fit border border-gray-300 bg-white dark:bg-amber-700 rounded'>
                 <div className='flex relative flex-col items-center'>
                     <div className='w-full h-16 overflow-hidden'>
                         {

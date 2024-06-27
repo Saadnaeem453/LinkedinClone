@@ -10,7 +10,6 @@ import { useTheme } from '@/context/ThemeContext';
 
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
-    console.log("theme", theme);
 
     return (
         <div className={theme}>

@@ -4,8 +4,7 @@ import { ReactNode } from "react";
 
 
 const ThemeToggle: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { theme, toggleTheme } = useTheme();
-    console.log("children", children);
+    const { theme } = useTheme();
 
     return (
         <div className={theme} >
