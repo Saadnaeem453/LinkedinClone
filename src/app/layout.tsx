@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
+import { ThemeProvider, useTheme } from "@/context/ThemeContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,18 +18,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.className} min-h-screen flex flex-col   `}>
-          <Navbar />
-          <div className="flex-1 w-full">
-            <main className="max-w-6xl mx-auto">
-              {children}
-            </main>
-          </div>
-        </body>
-      </html>
-    </ClerkProvider>
+    <ThemeProvider>
+      <ClerkProvider>
+        <html lang="en">
+          <body className={`${inter.className}   min-h-screen flex flex-col   `}>
+
+            <Navbar />
+            <div className="flex-1 w-full">
+              <main className="mx-auto">
+                {children}
+              </main>
+            </div>
+
+          </body>
+        </html>
+      </ClerkProvider>
+    </ThemeProvider>
+
   );
 }

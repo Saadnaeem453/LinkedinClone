@@ -6,7 +6,7 @@ const ProfilePhoto = ({ src }: { src: string }) => {
     return (
         <div>
             <Avatar>
-                <AvatarImage src={src} />
+                <AvatarImage src={src} width={40} height={40} />
             </Avatar>
         </div>
     )
