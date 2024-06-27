@@ -64,7 +64,7 @@ const Chat = () => {
                     onChange={(e) => setNewMessage(e.target.value)}
                     placeholder="Type a message..."
                 />
-                <button onClick={addMessage}>Send</button>
+                <Button className='bg-green-700' onClick={addMessage}>Send</Button>
             </div>
         </div>
     );
